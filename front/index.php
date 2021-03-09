@@ -30,7 +30,7 @@
   </head>
   <body class="goto-here">
     <?php
-			require('./utils/navbar.php')
+			require('./components/navbar.php')
 		?>
     <!-- END nav -->
 
