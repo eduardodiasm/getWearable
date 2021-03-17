@@ -38,7 +38,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Meu</a></span> <span>Carrinho</span></p>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Meu</a></span> <span>Carrinho</span></p>
             <h1 class="mb-0 bread">Carrinho</h1>
           </div>
         </div>
@@ -126,7 +126,7 @@
     						<span>R$17.60</span>
     					</p>
     				</div>
-    				<p><a href="./checkout.html" class="btn btn-primary py-3 px-4">Comprar</a></p>
+    				<p><a href="./checkout.php" class="btn btn-primary py-3 px-4">Comprar</a></p>
     			</div>
     		</div>
 			</div>
