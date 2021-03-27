@@ -52,25 +52,25 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-xl-7 ftco-animate">
-          <form action="#" class="billing-form">
+          <form method="POST" action="../back/signup.php" class="billing-form">
             <h3 class="mb-4 billing-heading">Faça o cadastro!</h3>
             <div class="row align-items-end">
               <div class="col-md-12">
                 <div class="form-group">
                   <label for="name">Nome</label>
-                  <input type="text" class="form-control" placeholder="Insira um nome">
+                  <input type="text" class="form-control" placeholder="Insira um nome" name="name" id="name">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" placeholder="Insira seu email">
+                  <input type="email" class="form-control" placeholder="Insira seu email" name="email" id="email">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="password">Senha</label>
-                  <input type="password" class="form-control" placeholder="Insira sua senha">
+                  <input type="password" class="form-control" placeholder="Insira sua senha" name="password" id="password">
                 </div>
               </div>
               <div class="col-md-12">

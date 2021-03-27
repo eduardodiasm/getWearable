@@ -53,18 +53,18 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-xl-7 ftco-animate">
-          <form action="#" class="billing-form">
+          <form method="POST" action="../back/signin.php" class="billing-form">
             <div class="row align-items-end">
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" placeholder="Insira seu email">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Insira seu email">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="password">Senha</label>
-                  <input type="password" class="form-control" placeholder="Insira sua senha">
+                  <input type="password" class="form-control" placeholder="Insira sua senha" name="password" id="password">
                 </div>
               </div>
               <div class="col-md-12">
