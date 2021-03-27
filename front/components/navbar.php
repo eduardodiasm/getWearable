@@ -11,7 +11,7 @@
         <li class="nav-item active"><a href="./index.php" class="nav-link">Inicio</a></li>
         <li class="nav-item active"><a href="./shop.php" class="nav-link">Loja</a></li>
         <li class="nav-item active"><a href="./signin.php" class="nav-link">Login</a></li>
-
+        <li class="nav-item active"><a href="./signup.php" class="nav-link">Cadastro</a></li>
         <!-- Verificar se o doido ta logado -->
         <li class="nav-item cta cta-colored"><a href="./cart.php" class="nav-link"><span
               class="icon-shopping_cart"></span>[0]</a></li>
