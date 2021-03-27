@@ -54,10 +54,10 @@
 						    <thead class="thead-primary">
 						      <tr class="text-center">
 						        <th>&nbsp;</th>
-						        <th>Product List</th>
+						        <th>Lista de produtos</th>
 						        <th>&nbsp;</th>
-						        <th>Price</th>
-						        <th>Quantity</th>
+						        <th>Preço</th>
+						        <th>Quantidade</th>
 						        <th>Total</th>
 						      </tr>
 						    </thead>

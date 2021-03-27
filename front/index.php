@@ -44,7 +44,7 @@
 	            <div class="col-md-12 ftco-animate text-center">
 	              <h1 class="mb-2">GETWEARABLE</h1>
 	              <h2 class="subheading mb-4">Se vista com o que há de mais recente no mercado tech</h2>
-	              <p><a href="./shop.html" class="btn btn-primary">Produtos</a></p>
+	              <p><a href="./shop.php" class="btn btn-primary">Produtos</a></p>
 	            </div>
 	          </div>
 	        </div>
