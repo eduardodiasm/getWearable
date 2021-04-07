@@ -3,7 +3,7 @@
 const path = require('path');
 
 module.exports = {
-  config: path.join(__dirname, '/scripts-criacao-banco/config/config.json')["development"],
-  'migrations-path': path.join(__dirname, '/scripts-criacao-banco/migrations'),
-  'seeders-path': path.join(__dirname, '/scripts-criacao-banco/seeders'),
+  config: path.join(__dirname, '/config/config.json')["development"],
+  'migrations-path': path.join(__dirname, '/migrations'),
+  'seeders-path': path.join(__dirname, '/seeders'),
 };
