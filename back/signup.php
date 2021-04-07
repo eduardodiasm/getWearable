@@ -33,8 +33,6 @@
   $name = $_POST['name'];
   $email = $_POST['email'];
   $password = $_POST['password']; 
-
-
   
   if($name == "" || $email == "" || $password == "") {
     echo("
@@ -44,10 +42,14 @@
       </script>
     ");
   } else {
+    $query = "INSERT INTO user (name, email, password, photo) VALUES ('$name', '$email', '$password', '')";
     
-    $insert = "INSERT INTO user VALUES('".$_POST["name"]."', '".$_POST["email"]."', '".$_POST["password"]."', 'dasd',)";
-    $select = mysqli_query($connect, $insert);
-    echo($select);
+    $insert = mysqli_query($connect, $query);
+
+    if($insert){
+      echo"<script language='javascript' type='text/javascript'>
+      alert('Usuário cadastrado com sucesso!');</script>";
+    }
   }
 
 ?>
