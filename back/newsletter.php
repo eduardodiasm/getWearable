@@ -28,6 +28,10 @@
 </head>
 
 <?php 
+  include("../front/components/navbar.php");
+?>
+
+<?php 
   $email = $_POST['email'];
 
   if($email == "") {
