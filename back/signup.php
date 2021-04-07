@@ -27,11 +27,9 @@
     <link rel="stylesheet" href="../front/css/style.css">
 </head>
 
-<?php 
-  include("../front/components/navbar.php");
-?>
-
 <?php
+  include("../front/components/navbar.php");
+ 
   require('./database/connection.php');
 
   $name = $_POST['name'];
