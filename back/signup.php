@@ -46,8 +46,6 @@
   } else {
     echo("$name, $email, $password");
   }
-?>
 
-<?php 
   include("../front/components/footer.php");
 ?>
