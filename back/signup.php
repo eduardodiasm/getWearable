@@ -28,10 +28,12 @@
 </head>
 
 <?php
+  require('./database/connection.php');
+
   $name = $_POST['name'];
   $email = $_POST['email'];
   $password = $_POST['password']; 
-
+  
   if($name == "" || $email == "" || $password == "") {
     echo("
       <script language='javascript' type='text/javascript'>
