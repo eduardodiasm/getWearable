@@ -28,13 +28,13 @@
 </head>
 
 <?php
-  include("../front/components/navbar.php");
- 
   require('./database/connection.php');
 
   $name = $_POST['name'];
   $email = $_POST['email'];
   $password = $_POST['password']; 
+
+
   
   if($name == "" || $email == "" || $password == "") {
     echo("
@@ -44,8 +44,10 @@
       </script>
     ");
   } else {
-    echo("$name, $email, $password");
+    
+    $insert = "INSERT INTO user VALUES('".$_POST["name"]."', '".$_POST["email"]."', '".$_POST["password"]."', 'dasd',)";
+    $select = mysqli_query($connect, $insert);
+    echo($select);
   }
 
-  include("../front/components/footer.php");
 ?>
