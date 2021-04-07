@@ -27,6 +27,10 @@
     <link rel="stylesheet" href="../front/css/style.css">
 </head>
 
+<?php 
+  include("../front/components/navbar.php");
+?>
+
 <?php
   $name = $_POST['name'];
   $email = $_POST['email'];
@@ -42,4 +46,8 @@
   } else {
     echo("$name, $email, $password");
   }
+?>
+
+<?php 
+  include("../front/components/footer.php");
 ?>

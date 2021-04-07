@@ -27,6 +27,10 @@
     <link rel="stylesheet" href="../front/css/style.css">
 </head>
 
+<?php 
+  include("../front/components/navbar.php");
+?>
+
 <?php
   $email = $_POST['email'];
   $password = $_POST['password'];
