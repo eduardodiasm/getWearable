@@ -42,7 +42,7 @@
       </script>
     ");
   } else {
-    $query = "INSERT INTO user (name, email, password, photo) VALUES ('$name', '$email', '$password', '')";
+    $query = "INSERT INTO user (name, email, password) VALUES ('$name', '$email', '$password')";
     
     $insert = mysqli_query($connect, $query);
 
