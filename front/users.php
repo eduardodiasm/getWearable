@@ -59,8 +59,7 @@
 
  
 <?php
-  include('../config.php');
-  include('../back/controller/user.php');
+  require_once('../back/controller/user.php');
   $usuarios = tratarGetTelinhaUsuarios();
 ?>
 
