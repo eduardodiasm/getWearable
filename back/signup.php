@@ -33,8 +33,6 @@
   $name = $_POST['name'];
   $email = $_POST['email'];
   $password = $_POST['password']; 
-
-
   
   if($name == "" || $email == "" || $password == "") {
     echo("
@@ -44,10 +42,8 @@
       </script>
     ");
   } else {
-    
-    $insert = "INSERT INTO user VALUES('".$_POST["name"]."', '".$_POST["email"]."', '".$_POST["password"]."', 'dasd',)";
+    $insert = "INSERT INTO user VALUES('$name', '$email', 'password', 'dasd',)";
     $select = mysqli_query($connect, $insert);
     echo($select);
   }
-
 ?>
