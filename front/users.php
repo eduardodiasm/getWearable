@@ -59,8 +59,8 @@
 
  
 <?php
-  require_once('../back/controller/user.php');
-  $usuarios = tratarGetTelinhaUsuarios();
+  require_once('../back/user/controller/get.php');
+  $usuarios = buscarUsuarios();
 ?>
 
 <div class="row-center">
@@ -94,7 +94,7 @@
                 </form>
               </div>
               <div class="col-md-4" align="center">
-                <form action="./users.php" method="POST">
+                <form action="" method="POST">
                   <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
                   <input type="hidden" name="action" value="delete">
                   <button class="btn btn-info btn-xs" type="submit"><span style="font-size:1.75em;" class="glyphicon glyphicon-trash">Deletar</span></button>

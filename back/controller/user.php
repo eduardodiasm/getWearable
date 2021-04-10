@@ -1,13 +1,5 @@
 <?php 
 
-  include (dirname(__DIR__).'../database/connection.php');
-
-  function tratarGetTelinhaUsuarios () {
-    $query = "SELECT * FROM user";
-    $query_result = mysqli_query($GLOBALS['connect'], $query);
-    return $query_result;
-  }
-
   function tratarPostTelinhaUsuarios () {
     #Confere se a ação enviada pelo form é de envio
     if($_POST['action'] == 'edit') {
