@@ -73,30 +73,29 @@
         <td><b>Ação</b></td>
       </tr>
 
-      <!--  Percorre o banco para imprimir a lista de usuários -->
-      <?php while($user = $usuarios) { ?>
+      <?php while ($usuario = mysqli_fetch_array($usuarios)) { ?>
         <tr>
           <td style="vertical-align: middle;">
-            <?php echo $user['id']; ?>
+            <?php echo $usuario['id']; ?>
           </td>
           <td style="vertical-align: middle;">
-            <?php echo $user['name']; ?>
+            <?php echo $usuario['name']; ?>
           </td>
           <td style="vertical-align: middle;">
-          <?php echo $user['email']; ?>
+          <?php echo $usuario['email']; ?>
           </td>
           <td style="vertical-align: middle;">
             <div class="row">
               <div class="col-md-4" align="center">
                 <form action="./users.php" method="POST">
-                  <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
+                  <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
                   <input type="hidden" name="action" value="edit">
                   <button class="btn btn-info btn-xs" ><a href= "/back/controller/user.php"><span style="font-size:1.75em;" class="glyphicon glyphicon-edit">Editar</span></a></button>
                 </form>
               </div>
               <div class="col-md-4" align="center">
                 <form action="./users.php" method="POST">
-                  <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
+                  <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
                   <input type="hidden" name="action" value="delete">
                   <button class="btn btn-info btn-xs" type="submit"><span style="font-size:1.75em;" class="glyphicon glyphicon-trash">Deletar</span></button>
                 </form>

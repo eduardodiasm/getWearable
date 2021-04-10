@@ -5,7 +5,7 @@
   function tratarGetTelinhaUsuarios () {
     $query = "SELECT * FROM user";
     $query_result = mysqli_query($GLOBALS['connect'], $query);
-    return mysqli_fetch_array($query_result);
+    return $query_result;
   }
 
   function tratarPostTelinhaUsuarios () {
