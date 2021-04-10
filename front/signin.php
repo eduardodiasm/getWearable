@@ -69,7 +69,7 @@
               </div>
               <div class="col-md-12">
                 <div class="form-group">
-                  <button type="submit" class="btn btn-primary col-md-12 d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary col-md-12 d-flex justify-content-center" name="send">
                     <p style="display: contents;">Acessar</p>
                   </button>
                 </div>

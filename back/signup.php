@@ -42,14 +42,8 @@
       </script>
     ");
   } else {
-    $query = "INSERT INTO user (name, email, password) VALUES ('$name', '$email', '$password')";
-    
-    $insert = mysqli_query($connect, $query);
-
-    if($insert){
-      echo"<script language='javascript' type='text/javascript'>
-      alert('Usuário cadastrado com sucesso!');</script>";
-    }
+    $insert = "INSERT INTO user VALUES('$name', '$email', 'password', 'dasd',)";
+    $select = mysqli_query($connect, $insert);
+    echo($select);
   }
-
 ?>
