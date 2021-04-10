@@ -94,9 +94,8 @@
                 </form>
               </div>
               <div class="col-md-4" align="center">
-                <form action="" method="POST">
+                <form action="../back/user/controller/delete.php" method="POST">
                   <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
-                  <input type="hidden" name="action" value="delete">
                   <button class="btn btn-info btn-xs" type="submit"><span style="font-size:1.75em;" class="glyphicon glyphicon-trash">Deletar</span></button>
                 </form>
               </div>
