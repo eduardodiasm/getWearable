@@ -26,12 +26,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
         field: 'password',
-      },
-
-      photo: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        field: 'photo',
       }
       
     });
