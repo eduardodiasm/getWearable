@@ -36,28 +36,6 @@
 <?php
   include('../front/components/navbar.php');
 ?>
-<!-- 
-  <div class="row">
-    <form class="contact-form" name="contact-form" method="POST" action="./users.php" enctype="multipart/form-data">
-      <input type="hidden" name="action" value="update">
-      <input type="hidden" name="id" value="">
-      <div class="col-sm-4">
-        <div class="form-group">
-          <label>Nome *</label>
-          <input type="text" name="name" value="" class="form-control" required="required">
-        </div>
-        <div class="form-group">
-          <label>Email *</label>
-          <input type="email" name="email" value="" class="form-control" required="required">
-        </div>
-        <div class="form-group">
-          <button type="submit" name="update" class="btn btn-primary btn-lg" required="required">Atualizar</button>
-        </div>
-      </div>
-    </form>
-  </div> -->
-
- 
 <?php
   require_once('../back/user/controller/get.php');
   $usuarios = buscarUsuarios();
@@ -87,10 +65,7 @@
           <td style="vertical-align: middle;">
             <div class="row">
               <div class="col-md-4" align="center">
-                <form action="./users.php" method="POST">
-                  <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
-                  <input type="hidden" name="action" value="edit">
-                  <button class="btn btn-info btn-xs" ><a href= "/back/controller/user.php"><span style="font-size:1.75em;" class="glyphicon glyphicon-edit">Editar</span></a></button>
+                  <button class="btn btn-info btn-xs"><a href= "./edit.php?id=<?php echo $usuario['id']; ?>"><span style="font-size:1.75em;" class="glyphicon glyphicon-edit">Editar</span></a></button>
                 </form>
               </div>
               <div class="col-md-4" align="center">
