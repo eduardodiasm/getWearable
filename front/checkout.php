@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="goto-here">
-<<<<<<< HEAD:front/checkout.html
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Vegefoods</a>
@@ -56,11 +55,6 @@
 	      </div>
 	    </div>
 	  </nav>
-=======
-		<?php
-			require('./components/navbar.php')
-		?>
->>>>>>> 1188dc7196e28da753cd5c2c0997bbfe0e2777a8:front/checkout.php
     <!-- END nav -->
 
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
