@@ -77,7 +77,7 @@
 	                  <input type="number" name="quantity" class="form-control" placeholder="">
 	                </div>
 		            </div>
-                <div class="w-100"></div>
+                <!-- <div class="w-100"></div> -->
                 <div class="col-md-12">
 		            	<div class="form-group">
                     <label for="image">Foto principal do produto</label>
@@ -88,10 +88,8 @@
                 <br>
 	            </div>
               <div class="col-md-12">
-	          		<div class="cart-detail p-3 p-md-4">
-									<div class="form-group">
-									<button class="btn btn-primary py-3 px-4">Adicionar</button>
-									</div>
+								<div class="form-group">
+									<button class="col-md-12 btn btn-primary py-3 px-4">Adicionar</button>
 								</div>
 	          	</div>
 	          </div>
