@@ -15,7 +15,9 @@
   } else {
     $insert = "INSERT INTO user (name, email, password) VALUES('$name', '$email', '$password')";
     $select = mysqli_query($connect, $insert);
-    header("Location: /getWearable/front/users.php");
+    
+    echo "<script> javascript:history.go(-2);</script>";
+    
     exit;
   }
 ?>
