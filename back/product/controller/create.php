@@ -2,7 +2,19 @@
   include (dirname(__DIR__).'../../database/connection.php');
 
   $name = $_POST['name'];
-  $principal_photo = $_POST['principal_photo'];
+  // $principal_photo = $_POST['principal_photo'];
+
+  if($_FILES['principal_photo']['name'] != '') {
+    $archive = $_FILES['principal_photo'];
+    $ext = explode('.', $archive['name']);
+    $new_name = md5(uniquid(time())) . '.' . $ext[1];
+    $image_dir = '../../image/products/' . $new_name;
+    move_uploaded_file($archive['tmp_name'], $image_dir);
+    $principal_photo = $new_name;
+  } else {
+    // escolher uma imagem padrão para os produtos
+  }
+
   $price = $_POST['price'];
   $quantity = $_POST['quantity']; 
   $description = $_POST['description']; 
