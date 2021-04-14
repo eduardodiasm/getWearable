@@ -48,7 +48,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-7 ftco-animate">
-						<form action="../back/product/controller/create.php" method="POST" class="billing-form">
+						<form action="../../back/admin/products/create.php" method="POST" class="billing-form">
 							<h3 class="mb-4 billing-heading">Infos do produto</h3>
 	          	<div class="row align-items-end">
 	          		<div class="col-md-12">

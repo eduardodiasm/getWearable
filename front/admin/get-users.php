@@ -37,7 +37,7 @@
   include('../front/components/navbar.php');
 ?>
 <?php
-  require_once('../back/user/controller/get.php');
+  require_once('../back/admin/user/get-users.php');
   $usuarios = buscarUsuarios();
 ?>
 

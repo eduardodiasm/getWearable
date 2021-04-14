@@ -53,7 +53,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-xl-7 ftco-animate">
-          <form method="POST" action="../back/user/controller/sign-in.php" class="billing-form">
+          <form method="POST" action="../back/admin/user/get-users.php" class="billing-form">
             <div class="row align-items-end">
               <div class="col-md-6">
                 <div class="form-group">
