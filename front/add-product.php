@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+<head>
+    <title>getWearable</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -34,7 +34,7 @@
 		?>
     <!-- END nav -->
 
-    <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url('https://atriumhealth.org/dailydose/-/media/daily-dose-blog/featured-images/hw-fitness-tracker_featured.jpg?h=1080&la=en&w=1920&hash=054879BF8652A5A951D02ABC5BAF92B2C84AA142');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
@@ -48,20 +48,20 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-7 ftco-animate">
-						<form action="#" class="billing-form">
+						<form action="../back/product/controller/create.php" method="POST" class="billing-form">
 							<h3 class="mb-4 billing-heading">Infos do produto</h3>
 	          	<div class="row align-items-end">
 	          		<div class="col-md-12">
 	                <div class="form-group">
-	                	<label for="firstname">Nome do produto</label>
-	                  <input type="text" class="form-control" placeholder="">
+	                	<label for="name">Nome do produto</label>
+	                  <input type="text" name="name" class="form-control" placeholder="">
 	                </div>
 	              </div>
                 <div class="w-100"></div>
 		            <div class="col-md-12">
 		            	<div class="form-group">
 		            		<label for="description">Descrição</label>
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea class="form-control" name="description" rows="3"></textarea>
 		            	</div>
 		            </div>
 		            <div class="w-100"></div>
@@ -80,8 +80,8 @@
                 <!-- <div class="w-100"></div> -->
                 <div class="col-md-12">
 		            	<div class="form-group">
-                    <label for="image">Foto principal do produto</label>
-                    <input type="file" class="form-control-file" id="image" name="image">
+                    <label for="principal_photo">Foto principal do produto</label>
+                    <input type="file" class="form-control-file" id="image" name="principal_photo">
 	                </div>
 		            </div>
                 <div class="w-100"></div>
@@ -89,49 +89,13 @@
 	            </div>
               <div class="col-md-12">
 								<div class="form-group">
-									<button class="col-md-12 btn btn-primary py-3 px-4">Adicionar</button>
+									<button class="col-md-12 btn btn-primary py-3 px-4" type="submit">Adicionar</button>
 								</div>
 	          	</div>
 	          </div>
-          </div> <!-- .col-md-8 -->
+          </div>
 	          </form><!-- END -->
 					</div>
-	          	<!-- <div class="col-md-7">
-	          		<div class="cart-detail p-3 p-md-4">
-	          			<h3 class="billing-heading mb-4">Metódos de pagamento</h3>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio" class="mr-2"> Direct Bank Tranfer</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio" class="mr-2"> Check Payment</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio" class="mr-2"> Paypal</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="checkbox">
-											   <label><input type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
-											</div>
-										</div>
-									</div>
-									<p><a href="#"class="btn btn-primary py-3 px-4">Place an order</a></p>
-								</div>
-	          	</div>
-	          </div>
-          </div> .col-md-8 -->
         </div>
       </div>
     </section> <!-- .section -->
