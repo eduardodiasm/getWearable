@@ -63,8 +63,13 @@
 								src="https://i.ytimg.com/vi/wRyxDsOQhBQ/maxresdefault.jpg" alt="Colorlib Template">
 							<div class="overlay"></div>
 						</a>
-						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="#"><?php echo $product['name']; ?></a></h3>
+						<div class="text py-4 pb-4 px-4 text-center">
+							<h3><a href="#"><?php 
+							if (strlen($product['name']) > 20) {
+								$product['name'] = substr($product['name'], 0, 20).'...';
+							}
+								echo $product['name'];
+							?></a></h3>
 							<div class="d-flex">
 								<div class="pricing">
 									<p class="price"><span class="price-sale"><?php echo "R$ " . $product['price']; ?></span></p>

@@ -13,9 +13,9 @@
       </script>
     ");
   } else {
-    $insert = "INSERT INTO user VALUES('$name', '$email', $password, 'photo')";
+    $insert = "INSERT INTO user (name, email, password) VALUES('$name', '$email', '$password')";
     $select = mysqli_query($connect, $insert);
-    header("Location: /getWearable/front/shop.php");
+    header("Location: /getWearable/front/users.php");
     exit;
   }
 ?>
