@@ -52,7 +52,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-xl-7 ftco-animate">
-          <form method="POST" action="../back/signup.php" class="billing-form">
+          <form method="POST" action="../back/user/controller/create.php" class="billing-form">
             <h3 class="mb-4 billing-heading">Faça o cadastro!</h3>
             <div class="row align-items-end">
               <div class="col-md-12">
