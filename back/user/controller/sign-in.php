@@ -20,7 +20,7 @@
   $encontrou_usuario = mysqli_num_rows($resultado_busca);
   
   if (!$encontrou_usuario) {
-    header("Location: /getWearable/front/signin.php");
+    echo "<script> javascript:history.go(-2);</script>";
     exit;
   }
 

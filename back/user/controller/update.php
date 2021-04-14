@@ -8,6 +8,7 @@
   $query = "UPDATE user SET name = '$name', email = '$email' WHERE id = '$id'"; 
   $update = mysqli_query($GLOBALS['connect'], $query); 
 
-  header("Location: /getWearable/front/users.php");
+  echo "<script> javascript:history.go(-2);</script>";
+
   exit;
 ?>
