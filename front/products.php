@@ -83,7 +83,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
+				<!-- <div class="col-md-6 col-lg-3 ftco-animate">
 					<div class="product">
 						<a href="#" class="img-prod"><img class="img-fluid"
 								src="https://i.ytimg.com/vi/wRyxDsOQhBQ/maxresdefault.jpg" alt="Colorlib Template">
@@ -305,7 +305,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</section>
 		
 	<?php
