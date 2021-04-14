@@ -33,7 +33,10 @@
 
 <body class="goto-here">
 		<?php
-			require('./components/navbar.php')
+			require './components/navbar.php';
+			
+			require_once '../back/product/controller/get.php';
+			$products = getProduct();
 		?>
 	<!-- END nav -->
 
