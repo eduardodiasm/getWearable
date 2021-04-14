@@ -64,11 +64,12 @@
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-4 pb-4 px-4 text-center">
-							<h3><a href="#"><?php 
-							if (strlen($product['name']) > 20) {
-								$product['name'] = substr($product['name'], 0, 20).'...';
-							}
-								echo $product['name'];
+							<h3><a href="#">
+							<?php 
+								if (strlen($product['name']) > 20) {
+									$product['name'] = substr($product['name'], 0, 20).'...';
+								}
+									echo $product['name'];
 							?></a></h3>
 							<div class="d-flex">
 								<div class="pricing">
