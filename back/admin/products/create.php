@@ -11,7 +11,7 @@
     move_uploaded_file($archive['tmp_name'], $image_dir);
     $principal_photo = $new_name;
   } else {
-    // escolher uma imagem padrão para os produtos
+    $principal_photo = 'no-image.png';
   }
 
   $price = $_POST['price'];
