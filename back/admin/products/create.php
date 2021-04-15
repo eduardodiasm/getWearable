@@ -2,12 +2,11 @@
   include (dirname(__DIR__).'../../database/connection.php');
 
   $name = $_POST['name'];
-  // $principal_photo = $_POST['principal_photo'];
 
   if($_FILES['principal_photo']['name'] != '') {
     $archive = $_FILES['principal_photo'];
     $ext = explode('.', $archive['name']);
-    $new_name = md5(uniquid(time())) . '.' . $ext[1];
+    $new_name = md5(uniqid(time())) . '.' . $ext[1];
     $image_dir = '../../image/products/' . $new_name;
     move_uploaded_file($archive['tmp_name'], $image_dir);
     $principal_photo = $new_name;
@@ -24,7 +23,6 @@
     echo("
       <script language='javascript' type='text/javascript'>
         alert('Todos os campos precisam ser preenchidos');
-        window.location.href='../front/signup.php';
       </script>
     ");
   } else {

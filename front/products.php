@@ -56,11 +56,13 @@
 				</div>
 			</div>
 			<div class="row">
-			<?php while($product = mysqli_fetch_array($products)) { ?>
+			<?php while($product = mysqli_fetch_array($products)) {?>
 				<div class="col-md-6 col-lg-3 ftco-animate">
 					<div class="product">
-						<a href="#" class="img-prod"><img class="img-fluid"
-								src="../back/image/products/ <?php echo $principal_photo; ?>" alt="Colorlib Template">
+						
+						<a href="#" class="img-prod">
+						<img class="img-fluid"
+								src="../back/image/products/<?php echo $product['principal_photo'];?>" alt="Colorlib Template">
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-4 pb-4 px-4 text-center">
