@@ -15,11 +15,11 @@
   <div class="col-sm-4">
     <div class="form-group">
       <label>Nome</label>
-      <input type="text" name="name" placeholder="<?php echo $user['name']; ?>" class="form-control" required="required">
+      <input type="text" name="name" value="<?php echo $user['name']; ?>" class="form-control" required="required">
     </div>
     <div class="form-group">
       <label>Email</label>
-      <input type="email" name="email" value="" placeholder="<?php echo $user['email']; ?>" class="form-control" required="required">
+      <input type="email" name="email" value="<?php echo $user['email']; ?>" class="form-control" required="required">
     </div>
     <div class="form-group">
       <button type="submit" name="update" class="btn btn-primary btn-lg" required="required">Atualizar</button>
