@@ -31,7 +31,7 @@
     )";
     $select = mysqli_query($connect, $insert);
 
-    header("Location: /getWearable/front/add-product.php");
+    header("Location: /getWearable/front/admin/add-product.php");
     exit;
   }
 ?>
