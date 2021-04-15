@@ -35,7 +35,7 @@
 		<?php
 			require './components/navbar.php';
 			
-			require_once '../back/product/controller/get.php';
+			require_once '../back/admin/products/get-products.php';
 			$products = getProduct();
 		?>
 	<!-- END nav -->
