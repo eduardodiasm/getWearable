@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  $usuario_esta_logado = isset($_SESSION['idUsuario']);
+?>
+
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
     <a class="navbar-brand" href="./index.php">getWearable</a>
@@ -10,11 +15,20 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a href="./index.php" class="nav-link">Inicio</a></li>
         <li class="nav-item active"><a href="./shop.php" class="nav-link">Loja</a></li>
-        <li class="nav-item active"><a href="./signin.php" class="nav-link">Login</a></li>
-        <li class="nav-item active"><a href="./signup.php" class="nav-link">Cadastro</a></li>
+        <?php
+          if (!$usuario_esta_logado) {
+            echo '<li class="nav-item active"><a href="./signin.php" class="nav-link">Login</a></li>
+              <li class="nav-item active"><a href="./signup.php" class="nav-link">Cadastro</a></li>';
+          }
+        ?>
+        
         <!-- Verificar se o doido ta logado -->
-        <li class="nav-item cta cta-colored"><a href="./cart.php" class="nav-link"><span
-              class="icon-shopping_cart"></span>[0]</a></li>
+        <?php
+          if ($usuario_esta_logado) {
+            echo '<li class="nav-item cta cta-colored"><a href="./cart.php" class="nav-link"><span
+              class="icon-shopping_cart"></span>[0]</a></li>';
+          }
+        ?>
       </ul>
     </div>
   </div>
