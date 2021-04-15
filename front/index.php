@@ -34,8 +34,8 @@
 
 			require_once dirname(__DIR__).'../back/database/connection.php';
 
-			$query = "SELECT * FROM product ORDER BY id DESC";
-			$query_result = mysqli_query($GLOBALS['connect'], $query);
+			require_once '../back/admin/products/get-products.php';
+			$products = getDescendingOrderProduct();
 		?>
     <!-- END nav -->
 
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<div class="row">
-			<?php while($product = mysqli_fetch_array($query_result)) { ?>
+			<?php while($product = mysqli_fetch_array($products)) { ?>
 				<div class="col-md-6 col-lg-3 ftco-animate">
 					<div class="product">
 						<a href="#" class="img-prod"><img class="img-fluid"
