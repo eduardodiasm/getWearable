@@ -32,8 +32,6 @@
     <?php
 			require('./components/navbar.php');
 
-			require_once dirname(__DIR__).'../back/database/connection.php';
-
 			require_once '../back/admin/products/get-products.php';
 			$products = getDescendingOrderProduct();
 		?>
