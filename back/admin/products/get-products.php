@@ -11,7 +11,7 @@
 
   // Função para listar os produtos em ordem decrescente, para mostrar os últimos lançamentos
   function getDescendingOrderProduct() {
-    $query = "SELECT * FROM product ORDER BY id DESC";
+    $query = "SELECT * FROM product ORDER BY id DESC LIMIT 4";
 		$query_result = mysqli_query($GLOBALS['connect'], $query);
 
     return $query_result;

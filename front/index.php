@@ -57,13 +57,11 @@
 
     <section class="ftco-section">
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-10 mb-5 text-center">
-					<ul class="product-category">
-						<li><a href="#" class="active">Todos</a></li>
-					</ul>
-				</div>
-			</div>
+		<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h3 class="mb-4" style="color: #82ae46;">Lançamentos recentes</h3>
+          </div>
+        </div>   		
 			<div class="row">
 			<?php while($product = mysqli_fetch_array($products)) { ?>
 				<div class="col-md-6 col-lg-3 ftco-animate">
