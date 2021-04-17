@@ -2,7 +2,7 @@
 
   include (dirname(__DIR__).'../../database/connection.php');
 
-  $user_id = $_POST['id'];
+  $user_id = $_GET['id'];
   $query = "DELETE FROM user WHERE id = $user_id;";
   $query_result = mysqli_query($GLOBALS['connect'], $query); 
 
