@@ -6,7 +6,7 @@
         <span>Insira seu email para ficar por dentro das ofertas</span>
       </div>
       <div class="col-md-6 d-flex align-items-center">
-        <form action="../back/newsletter.php" method="POST" class="subscribe-form">
+        <form action="../back/user/controller/newsletter.php" method="POST" class="subscribe-form">
           <div class="form-group d-flex">
             <input type="text" class="form-control" placeholder="Insira seu email" name="email" id="email">
             <input type="submit" value="Inscreva-se" class="submit px-3">
