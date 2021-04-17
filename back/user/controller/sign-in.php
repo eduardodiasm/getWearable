@@ -1,7 +1,6 @@
 <?php
 
   include (dirname(__DIR__).'../../database/connection.php');
-  
 
   function buscarUsuarioPorEmailSenha ($email, $password) {
     $query = "SELECT * FROM user WHERE email = '$email' and password = '$password'";

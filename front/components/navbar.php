@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $usuario_esta_logado = isset($_SESSION['idUsuario']);
+  $usuario_esta_logado = isset($_SESSION['email']);
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">

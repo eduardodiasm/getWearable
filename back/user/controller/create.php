@@ -1,5 +1,7 @@
 <?php
   include (dirname(__DIR__).'../../database/connection.php');
+  include ('./logarUsuarioPosCadastro.php');
+
 
   $name = $_POST['name'];
   $email = $_POST['email'];
@@ -16,8 +18,11 @@
     $insert = "INSERT INTO user (name, email, password) VALUES('$name', '$email', '$password')";
     $select = mysqli_query($connect, $insert);
     
-    echo "<script> javascript:history.go(-2);</script>";
-    
+    $select = mysqli_query($connect, $insert);
+
+    logarUsuarioPosCadastro($email);
+
+    header("Location: /getWearable/front/shop.php");
     exit;
   }
 ?>
