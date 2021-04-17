@@ -79,14 +79,14 @@
 							</div>
 							<div class="bottom-area d-flex px-3">
 								<div class="m-auto d-flex">
-									<a href="../back/admin/products/delete.php?id=<?php echo $product['id'] ?>" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+									<a href="../back/admin/products/delete.php?id=<?php echo $product['id']; ?>" class="add-to-cart d-flex justify-content-center align-items-center text-center">
 										<span><i class="ion icon-trash"></i></span>
 									</a>
-									<a href="./admin/edit-product.php?id=<?php echo $product['id'] ?>" class="buy-now d-flex justify-content-center align-items-center mx-1">
+									<a href="./admin/edit-product.php?id=<?php echo $product['id']; ?>" class="buy-now d-flex justify-content-center align-items-center mx-1">
 										<span><i class="ion icon-pencil"></i></span>
 									</a>
-									<a href="#" class="heart d-flex justify-content-center align-items-center ">
-										<span><i class="ion-ios-heart"></i></span>
+									<a href="./product-single.php?id=<?php echo $product['id']; ?>" class="heart d-flex justify-content-center align-items-center ">
+										<span><i class="ion-ios-menu"></i></span>
 									</a>
 								</div>
 							</div>
