@@ -54,13 +54,6 @@
 
 	<section class="ftco-section">
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-10 mb-5 text-center">
-					<ul class="product-category">
-						<li><a href="#" class="active">Todos</a></li>
-					</ul>
-				</div>
-			</div>
 			<div class="row">
 			<?php while($product = mysqli_fetch_array($products)) { ?>
 				<div class="col-md-6 col-lg-3 ftco-animate">
@@ -84,7 +77,7 @@
 							</div>
 							<div class="bottom-area d-flex px-3">
 								<div class="m-auto d-flex">
-									<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+									<a href="./product-single.php?id=<?php echo $product['id']; ?>" class="add-to-cart d-flex justify-content-center align-items-center text-center">
 										<span><i class="ion-ios-menu"></i></span>
 									</a>
 									<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
