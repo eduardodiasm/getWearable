@@ -71,8 +71,19 @@
 						
 									?>
 						      <tr class="text-center">
-						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-						        
+						        <td class="product-remove"><a href="?action=del&id=<?php echo $response['id']; ?>"><span class="ion-ios-close"></span></a></td>
+
+						        <?php 
+											if(isset($_GET['action']) && $_GET['action'] == 'del') {
+												$id = intval($_GET['id']);
+
+												if(isset($_SESSION['cart'][$id])) {
+													unset($_SESSION['cart'][$id]);
+												}
+
+
+											}
+										?>
 						        <td class="image-prod"><div class="img" style="background-image:url(images/product-3.jpg);"></div></td>
 						        
 						        <td class="product-name">
