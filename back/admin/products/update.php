@@ -18,7 +18,7 @@
     $principal_photo = 'no-image.png';
   }
 
-  $query = "UPDATE product SET name = '$name', description = '$email', principal_photo = '$principal_photo', price = $price, quantity = $quantity WHERE id = '$id'"; 
+  $query = "UPDATE product SET name = '$name', description = '$email', principal_photo = '$principal_photo', price = $price, quantity = $quantity, description = '$description' WHERE id = '$id'"; 
 
   $update = mysqli_query($GLOBALS['connect'], $query); 
 

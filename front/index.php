@@ -43,7 +43,6 @@
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
 	            <div class="col-md-12 ftco-animate text-center">
 	              <h1 class="mb-2">GETWEARABLE</h1>
 	              <h2 class="subheading mb-4">Se vista com o que há de mais recente no mercado tech</h2>
