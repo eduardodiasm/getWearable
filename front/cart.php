@@ -30,7 +30,11 @@
   </head>
   <body class="goto-here">
 		<?php
-			require('./components/navbar.php')
+			require('./components/navbar.php');
+
+			if(!isset($_SESSION['cart'])) {
+				$_SESSION['cart'] = array();
+			}
 		?>
     <!-- END nav -->
 
@@ -68,22 +72,9 @@
 											$query = "SELECT * FROM product WHERE id=$id";
 											$res = mysqli_query($connect, $query);
 											$response = mysqli_fetch_assoc($res);
-						
 									?>
 						      <tr class="text-center">
-						        <td class="product-remove"><a href="?action=del&id=<?php echo $response['id']; ?>"><span class="ion-ios-close"></span></a></td>
-
-						        <?php 
-											if(isset($_GET['action']) && $_GET['action'] == 'del') {
-												$id = intval($_GET['id']);
-
-												if(isset($_SESSION['cart'][$id])) {
-													unset($_SESSION['cart'][$id]);
-												}
-
-
-											}
-										?>
+						        <td class="product-remove"><a href="../back/cart/controller/remove_product.php?action=del&id=<?php echo $response['id']; ?>"><span class="ion-ios-close"></span></a></td>
 						        <td class="image-prod"><div class="img" style="background-image:url(images/product-3.jpg);"></div></td>
 						        
 						        <td class="product-name">
@@ -95,7 +86,7 @@
 						        
 						        <td class="quantity">
 						        	<div class="input-group mb-3">
-					             	<input type="text" name="quantity" class="quantity form-control input-number" value="<?php echo $qtd; ?>" min="1" max="100">
+					             	<input type="text" name="quantity" class="quantity form-control input-number" value="<?php echo $qtd['quantidade']; ?>" min="1" max="100">
 					          	</div>
 					          </td>
 						        
