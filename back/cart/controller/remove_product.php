@@ -4,7 +4,12 @@
   $action = $_GET['action'];
   $productId = $_GET['id'];
 
-  unset($_SESSION['cart'][$productId]);
+  if($_SESSION['cart'][$productId]['quantidade'] > 1){
+    $_SESSION['cart'][$productId]['quantidade']--;
+  }
+  else {
+    unset($_SESSION['cart'][$productId]);
+  }
   
   header("Location: ../../../front/cart.php");
 ?>
