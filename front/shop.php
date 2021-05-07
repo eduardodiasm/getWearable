@@ -88,9 +88,7 @@
 										<span><i class="ion-ios-cart"></i></span>
 									</a>
 									
-									<a href="#" class="heart d-flex justify-content-center align-items-center ">
-										<span><i class="ion-ios-heart"></i></span>
-									</a>
+									
 								</div>
 							</div>
 						</div>
