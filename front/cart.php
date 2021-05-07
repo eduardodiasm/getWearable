@@ -35,6 +35,7 @@
 			if(!isset($_SESSION['cart'])) {
 				$_SESSION['cart'] = array();
 			}
+			$total = 0
 		?>
     <!-- END nav -->
 
@@ -90,7 +91,13 @@
 					          	</div>
 					          </td>
 						        
-						        <td class="total">R$4.90</td>
+						        <td class="total">
+											<?php
+												$total_produto = $qtd['quantidade'] * $response['price'];
+												$total += $total_produto;
+												print_r($total_produto);
+											?>
+										</td>
 						      </tr><!-- END TR-->
 									<?php }?>
 						    </tbody>
@@ -102,21 +109,13 @@
     			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
     					<h3>Total</h3>
-    					<p class="d-flex">
-    						<span>Valor total</span>
-    						<span>R$20.60</span>
-    					</p>
-    					<p class="d-flex">
-    						<span>Desconto</span>
-    						<span>R$3.00</span>
-    					</p>
     					<hr>
     					<p class="d-flex total-price">
     						<span>Total</span>
-    						<span>R$17.60</span>
+    						<span>R$<?php print_r($total)?></span>
     					</p>
     				</div>
-    				<p><a href="./checkout.php" class="btn btn-primary py-3 px-4">Comprar</a></p>
+    				<p><a href="./checkout.php?total=<?php print_r($total)?>" class="btn btn-primary py-3 px-4">Comprar</a></p>
     			</div>
     		</div>
 			</div>
