@@ -20,15 +20,19 @@
   $encontrou_usuario = mysqli_num_rows($resultado_busca);
   
   if (!$encontrou_usuario) {
-    header("Location: /getWearable/front/signin.php");
-    exit;
+    echo("
+      <script language='javascript' type='text/javascript'>
+        alert('Todos os campos precisam ser preenchidos');
+        window.location.href='../front/signin.php';
+      </script>
+    ");
   }
 
   $idUsuario = mysqli_fetch_array($resultado_busca)[0];
 
   startarSessao($email, $idUsuario);
 
-  header("Location: /getWearable/front/shop.php");
+  header("Location:  ../../../front/shop.php");
   exit;
 
 ?>
