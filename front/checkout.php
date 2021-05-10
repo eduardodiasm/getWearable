@@ -4,7 +4,8 @@
     <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+		<meta http-equiv="refresh" content="0; />
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
@@ -31,6 +32,8 @@
   <body class="goto-here">
     <?php 
 			include('./components/navbar.php');
+
+			$total = $_GET['total'];
 		?>
     <!-- END nav -->
 
@@ -49,88 +52,92 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-7 ftco-animate">
-						<form action="#" class="billing-form">
-							<h3 class="mb-4 billing-heading">Billing Details</h3>
-	          	<div class="row align-items-end">
-                <div class="w-100"></div>
-		            <div class="col-md-12">
-		            	<div class="form-group">
-		            		<label for="country">Estado</label>
-		            		<div class="select-wrap">
-		                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-		                  <select name="" id="" class="form-control">
-		                  	<option value="Rio Grande do Sul">RS</option>
-												<option value="Rio de Janeiro">RJ</option>
-												<option value="São Paulo">SP</option>
-		                  </select>
-		                </div>
-		            	</div>
-		            </div>
-		            <div class="w-100"></div>
-		            
-		            
-		            <div class="w-100"></div>
-		          
-		            <div class="w-100"></div>
-		            <div class="col-md-6">
-	                <div class="form-group">
-	                	<label for="phone">Telefone</label>
-	                  <input type="text" class="form-control" placeholder="">
-	                </div>
-	              </div>
-	              <div class="col-md-6">
-	                <div class="form-group">
-	                	<label>Cidade</label>
-	                  <input type="text" class="form-control" placeholder="">
-	                </div>
-                </div>
-								<div class="col-md-6">
-	                <div class="form-group">
-	                	<label>endereço</label>
-	                  <input type="text" class="form-control" placeholder="">
-	                </div>
-                </div>
-                <div class="w-100"></div>
-                
-	            </div>
-	          </form><!-- END -->
-					</div>
-					<div class="col-xl-5">
-	          <div class="row mt-5 pt-3">
-	          	<div class="col-md-12 d-flex mb-5">
-	          		<div class="cart-detail cart-total p-3 p-md-4">
-	          			<h3 class="billing-heading mb-4">Cart Total</h3>
-	          			
-		    					<hr>
-		    					<p class="d-flex total-price">
-		    						<span>Total</span>
-		    						<span>R$<?php 
-											$total = $_GET['total'];
-											print_r($total);
-										?>
-										</span>
-		    					</p>
-								</div>
-	          	</div>
-	          	<div class="col-md-12">
-	          		<div class="cart-detail p-3 p-md-4">
-	          			<h3 class="billing-heading mb-4">Metodos de pagamento</h3>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio" class="mr-2">Boleto</label>
+						<form method="post" action="../back/cart/controller/buy.php" class="">
+								<h3 class="mb-4 billing-heading">Billing Details</h3>
+								<div class="row align-items-end">
+									<div class="w-100"></div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="country">Estado</label>
+											<div class="select-wrap">
+												<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+												<select name="state" id="state" class="form-control">
+													<option value="Rio Grande do Sul">RS</option>
+													<option value="Rio de Janeiro">RJ</option>
+													<option value="São Paulo">SP</option>
+												</select>
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio" class="mr-2">Pix</label>
-											</div>
-										</div>
-									</div>
+									<div class="w-100"></div>
 									
-									<p><a href="#"class="btn btn-primary py-3 px-4">comprar</a></p>
+									
+									<div class="w-100"></div>
+								
+									<div class="w-100"></div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="phone">Telefone</label>
+											<input type="text" class="form-control" name="phone" id="phone" placeholder="">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Cidade</label>
+											<input type="text" class="form-control" name="city" id="city" placeholder="">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>endereço</label>
+											<input type="text" class="form-control" name="address" id="address" placeholder="">
+										</div>
+									</div>
+									<div class="w-100"></div>
+									
+								</div>
+					</div>
+							<div class="col-xl-5">
+								<div class="row mt-5 pt-3">
+									<div class="col-md-12 d-flex mb-5">
+										<div class="cart-detail cart-total p-3 p-md-4">
+											<h3 class="billing-heading mb-4">Cart Total</h3>
+											
+											<hr>
+											<p class="d-flex total-price">
+												<span>Total</span>
+												<span>R$ <label>
+												<input style="border: 0 none; outline: 0; box-shadow: 0 0 0 0;" name="price" id="price" value="<?php 
+													
+													print_r($total);
+
+												?>" readonly>
+												</label>
+											
+												</span>
+											</p>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="cart-detail p-3 p-md-4">
+											<h3 class="billing-heading mb-4">Metodos de pagamento</h3>
+											<div class="form-group">
+												<div class="col-md-12">
+													<div class="radio">
+														<label><input type="radio" name="method_payment" id="method_payment" value="boleto" class="mr-2">Boleto</label>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-md-12">
+													<div class="radio">
+														<label><input type="radio" name="method_payment" id="method_payment" value="pix" class="mr-2">Pix</label>
+													</div>
+												</div>
+											</div>
+											
+											<p><button type="submit" class="btn btn-primary py-3 px-4">comprar</button></p>
+							</form>
 								</div>
 	          	</div>
 	          </div>
