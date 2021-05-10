@@ -11,9 +11,11 @@
     echo("
       <script language='javascript' type='text/javascript'>
         alert('Todos os campos precisam ser preenchidos');
-        window.location.href='../front/signup.php';
       </script>
     ");
+
+    header("refresh: 1; url='../../../front/signup.php'");
+    
   } else {
     $insert = "INSERT INTO user (name, email, password) VALUES('$name', '$email', '$password')";
     $select = mysqli_query($connect, $insert);
