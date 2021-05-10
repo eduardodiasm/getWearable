@@ -26,7 +26,10 @@
         <?php
           if ($usuario_esta_logado) {
             echo '<li class="nav-item cta cta-colored"><a href="./cart.php" class="nav-link"><span
-              class="icon-shopping_cart"></span></a></li>';
+              class="icon-shopping_cart"></span></a></li>
+              <li class="nav-item cta cta-colored"><a href="../back/user/controller/logout.php" class="nav-link"><span
+            class="oi oi-account-logout"></span></a></li>
+              ';
           }
         ?>
       </ul>
