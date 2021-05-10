@@ -33,6 +33,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
         field: 'method_payment',
+      },
+      price: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        field: 'price',
       }
      });
   },
