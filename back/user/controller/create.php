@@ -22,7 +22,7 @@
 
     logarUsuarioPosCadastro($email);
 
-    header("Location: /getWearable/front/shop.php");
+    header("Location: ../../../front/shop.php");
     exit;
   }
 ?>
