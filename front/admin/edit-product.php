@@ -57,9 +57,21 @@
           <li class="nav-item active"><a href="../index.php" class="nav-link">Inicio</a></li>
           <li class="nav-item active"><a href="../shop.php" class="nav-link">Loja</a></li>
           <?php
-            if (isset($_SESSION['idUsuario']) {            
-              header("Location: ../index.php");
-                              
+            if (!isset($_SESSION['email'])) {
+              echo("<script>
+                alert('Você deve estar logado para acessar essa pagina')
+              </script>");    
+        
+              header("refresh: 1; url= '../index.php'");
+        
+              exit; 
+            }
+            else {
+                echo '<li class="nav-item cta cta-colored"><a href="../cart.php" class="nav-link"><span
+                  class="icon-shopping_cart"></span></a></li>
+                  <li class="nav-item cta cta-colored"><a href="../../back/user/controller/logout.php" class="nav-link"><span
+                class="oi oi-account-logout"></span></a></li>
+                  ';
             }
           ?>
           
