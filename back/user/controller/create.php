@@ -18,10 +18,9 @@
     
   } else {
     $insert = "INSERT INTO user (name, email, password) VALUES('$name', '$email', '$password')";
-    $select = mysqli_query($connect, $insert);
     
     $select = mysqli_query($connect, $insert);
-
+    
     logarUsuarioPosCadastro($email);
 
     header("Location: ../../../front/shop.php");
