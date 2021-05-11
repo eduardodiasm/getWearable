@@ -8,7 +8,10 @@
   $query = "UPDATE user SET name = '$name', email = '$email' WHERE id = '$id'"; 
   $update = mysqli_query($GLOBALS['connect'], $query); 
 
-  echo "<script> javascript:history.go(-2);</script>";
-
+  echo("<script>
+    alert('Usuario atualizado com sucesso')
+  </script>");
+  
+  header("refresh: 1; url='../../../front/admin/users.php'");
   exit;
 ?>
