@@ -34,7 +34,6 @@
 
 <?php
   session_start();
-  $usuario_esta_logado = isset($_SESSION['email']);
 
   require_once '../../back/admin/user/get-users.php';
   $users = buscarUsuarios();
@@ -53,9 +52,16 @@
           <li class="nav-item active"><a href="../index.php" class="nav-link">Inicio</a></li>
           <li class="nav-item active"><a href="../shop.php" class="nav-link">Loja</a></li>
           <?php
-            if (isset($usuario_esta_logado)) {
-              header("Location: ../index.php");
-            }else {
+            if (!isset($_SESSION['email'])) {
+              echo("<script>
+                alert('Você deve estar logado para acessar essa pagina')
+              </script>");    
+        
+              header("refresh: 1; url= '../index.php'");
+        
+              exit; 
+            }
+            else {
                 echo '<li class="nav-item cta cta-colored"><a href="../cart.php" class="nav-link"><span
                   class="icon-shopping_cart"></span></a></li>
                   <li class="nav-item cta cta-colored"><a href="../../back/user/controller/logout.php" class="nav-link"><span

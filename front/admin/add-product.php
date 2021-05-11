@@ -1,3 +1,18 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['email'])) {
+      echo("<script>
+        alert('Você deve estar logado para acessar essa pagina')
+      </script>");    
+
+      header("refresh: 1; url= '../index.php'");
+
+      exit; 
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +45,7 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="goto-here">
-  <?php
-    session_start();
-    $usuario_esta_logado = isset($_SESSION['email']);
-  ?>
+  
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
@@ -48,29 +60,18 @@
         <li class="nav-item active"><a href="../index.php" class="nav-link">Inicio</a></li>
         <li class="nav-item active"><a href="../shop.php" class="nav-link">Loja</a></li>
         <?php
-          if ($usuario_esta_logado == null) {
-            
-            header("Location: ../index.php");
-            
-          
-          } else {}
-
-          echo("
-              <script language='javascript' type='text/javascript'>
-                alert('Você não pode acessar essa pagina sem estar logado');
-              </script>
-            ");
+        if(isset($_SESSION['email'])) {
+          echo '<li class="nav-item cta cta-colored"><a href="../cart.php" class="nav-link"><span
+          class="icon-shopping_cart"></span></a></li>
+          <li class="nav-item cta cta-colored"><a href="../../back/user/controller/logout.php" class="nav-link"><span
+        class="oi oi-account-logout"></span></a></li>
+          ';
+        }
         ?>
         
         <!-- Verificar se o doido ta logado -->
         <?php
-          if ($usuario_esta_logado != null) {
-            echo '<li class="nav-item cta cta-colored"><a href="../cart.php" class="nav-link"><span
-              class="icon-shopping_cart"></span></a></li>
-              <li class="nav-item cta cta-colored"><a href="../../back/user/controller/logout.php" class="nav-link"><span
-            class="oi oi-account-logout"></span></a></li>
-              ';
-          }
+          
         ?>
       </ul>
     </div>
