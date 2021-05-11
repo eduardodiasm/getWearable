@@ -28,7 +28,6 @@
   </head>
 
 <?php 
-  include '../../../front/components/navbar.php';
   include (dirname(__DIR__).'../../database/connection.php');
 
   $method_payment =  $_POST['method_payment'];
@@ -47,19 +46,15 @@
     </script>";
 
     header("refresh: 1; url='../../../front/checkout.php?total=$price'");
-  } else {
-    $select = mysqli_query($connect, $insert);
+  } 
+  else {
+      $select = mysqli_query($connect, $insert);
 
-    echo "<script>
-      alert('Compra efetuada com sucesso')
-    </script>";
+      echo "<script>
+        alert('Compra efetuada com sucesso')
+      </script>";
 
-    if($method_payment == 'boleto') {
-      echo "<a href='https://upload.wikimedia.org/wikipedia/commons/c/c7/BoletoBancario.png'>Abra o boleto</a>";
-    }
-    if($method_payment == 'pix') {
-      echo "Faça pix para esta chave: 04271924040";
-    }
+      header("refresh: 1; url='../../../front/payment_page.php?method_payment=$method_payment'");
   }
 
   include '../../../front/components/footer.php';
