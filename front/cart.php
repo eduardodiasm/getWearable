@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+    <title>getWearable</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -39,7 +39,7 @@
 		?>
     <!-- END nav -->
 
-    <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url('https://atriumhealth.org/dailydose/-/media/daily-dose-blog/featured-images/hw-fitness-tracker_featured.jpg?h=1080&la=en&w=1920&hash=054879BF8652A5A951D02ABC5BAF92B2C84AA142');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
@@ -73,11 +73,17 @@
 											$query = "SELECT * FROM product WHERE id=$id";
 											$res = mysqli_query($connect, $query);
 											$response = mysqli_fetch_assoc($res);
+
+											$product_img = '../back/image/products/' . $response['principal_photo'];
 									?>
 						      <tr class="text-center">
 						        <td class="product-remove"><a href="../back/cart/controller/remove_product.php?action=del&id=<?php echo $response['id']; ?>"><span class="ion-ios-close"></span></a></td>
-						        <td class="image-prod"><div class="img" style="background-image:url(images/product-3.jpg);"></div></td>
-						        
+										<?php echo '
+											<td class="image-prod">
+												<div class="img" style="background-image:url('. $product_img .');"></div>
+											</td>
+										'; ?>
+
 						        <td class="product-name">
 						        	<h3><?php echo $response['name']; ?></h3>
 						        	<p>Far far away, behind the word mountains, far from the countries</p>
