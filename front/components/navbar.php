@@ -1,4 +1,3 @@
-
 <?php
   session_start();
   $usuario_esta_logado = isset($_SESSION['email']);

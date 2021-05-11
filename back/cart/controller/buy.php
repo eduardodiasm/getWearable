@@ -26,11 +26,10 @@
     <link rel="stylesheet" href="../../../front/css/icomoon.css">
     <link rel="stylesheet" href="../../../front/css/style.css">
   </head>
+
 <?php 
   include '../../../front/components/navbar.php';
   include (dirname(__DIR__).'../../database/connection.php');
-
-  session_start();
 
   $method_payment =  $_POST['method_payment'];
   $price =  $_POST['price'];
