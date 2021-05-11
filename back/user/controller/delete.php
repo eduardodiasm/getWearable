@@ -6,7 +6,11 @@
   $query = "DELETE FROM user WHERE id = $user_id;";
   $query_result = mysqli_query($GLOBALS['connect'], $query); 
 
-  echo "<script> javascript:history.go(-2);</script>";
+  echo("<script>
+    alert('Usuario excluido com sucesso')
+  </script>");
+  
+  header("refresh: 1; url='../../../front/admin/users.php'");
   
   exit;
 ?>
