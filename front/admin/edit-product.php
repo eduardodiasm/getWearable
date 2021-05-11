@@ -31,6 +31,7 @@
   <body class="goto-here">
     <?php
 			include (dirname(__DIR__).'../../back/database/connection.php');
+      session_start();
 
       $id = $_GET['id'];
 
@@ -39,10 +40,43 @@
       $query_result = mysqli_query($GLOBALS['connect'], $query);
 
       $product = mysqli_fetch_array($query_result);
-
-      include '../components/navbar.php';
+    
+      $usuario_esta_logado = $_SESSION['idUsuario'];
 		?>
-    <!-- END nav -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="./index.php">getWearable</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="../index.php" class="nav-link">Inicio</a></li>
+          <li class="nav-item active"><a href="../shop.php" class="nav-link">Loja</a></li>
+          <?php
+            if (isset($_SESSION['idUsuario']) {            
+              header("Location: ../index.php");
+                              
+            }
+          ?>
+          
+          <!-- Verificar se o doido ta logado -->
+          <?php
+            if (!isset($_SESSION['idUsuario'])) {
+              echo '<li class="nav-item cta cta-colored"><a href="../cart.php" class="nav-link"><span
+                class="icon-shopping_cart"></span></a></li>
+                <li class="nav-item cta cta-colored"><a href="../../back/user/controller/logout.php" class="nav-link"><span
+              class="oi oi-account-logout"></span></a></li>
+                ';
+            }
+          ?>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     <div class="hero-wrap hero-bread" style="background-image: url('https://atriumhealth.org/dailydose/-/media/daily-dose-blog/featured-images/hw-fitness-tracker_featured.jpg?h=1080&la=en&w=1920&hash=054879BF8652A5A951D02ABC5BAF92B2C84AA142');">
       <div class="container">

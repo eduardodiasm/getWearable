@@ -4,7 +4,8 @@
     <title>getWearable</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta http-equiv="refresh" content="0; />
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
@@ -29,10 +30,52 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="goto-here">
-    <?php
-			require('../components/navbar.php');
-		?>
-    <!-- END nav -->
+  <?php
+    session_start();
+    $usuario_esta_logado = isset($_SESSION['email']);
+  ?>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="../index.php">getWearable</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a href="../index.php" class="nav-link">Inicio</a></li>
+        <li class="nav-item active"><a href="../shop.php" class="nav-link">Loja</a></li>
+        <?php
+          if ($usuario_esta_logado == null) {
+            
+            header("Location: ../index.php");
+            
+          
+          } else {}
+
+          echo("
+              <script language='javascript' type='text/javascript'>
+                alert('Você não pode acessar essa pagina sem estar logado');
+              </script>
+            ");
+        ?>
+        
+        <!-- Verificar se o doido ta logado -->
+        <?php
+          if ($usuario_esta_logado != null) {
+            echo '<li class="nav-item cta cta-colored"><a href="../cart.php" class="nav-link"><span
+              class="icon-shopping_cart"></span></a></li>
+              <li class="nav-item cta cta-colored"><a href="../../back/user/controller/logout.php" class="nav-link"><span
+            class="oi oi-account-logout"></span></a></li>
+              ';
+          }
+        ?>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <div class="hero-wrap hero-bread" style="background-image: url('https://atriumhealth.org/dailydose/-/media/daily-dose-blog/featured-images/hw-fitness-tracker_featured.jpg?h=1080&la=en&w=1920&hash=054879BF8652A5A951D02ABC5BAF92B2C84AA142');">
       <div class="container">

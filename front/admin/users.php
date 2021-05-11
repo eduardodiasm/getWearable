@@ -33,11 +33,41 @@
 </head>
 
 <?php
-  include('../components/navbar.php');
+  session_start();
+  $usuario_esta_logado = isset($_SESSION['email']);
 
   require_once '../../back/admin/user/get-users.php';
   $users = buscarUsuarios();
 ?>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="./index.php">getWearable</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="../index.php" class="nav-link">Inicio</a></li>
+          <li class="nav-item active"><a href="../shop.php" class="nav-link">Loja</a></li>
+          <?php
+            if (isset($usuario_esta_logado)) {
+              header("Location: ../index.php");
+            }else {
+                echo '<li class="nav-item cta cta-colored"><a href="../cart.php" class="nav-link"><span
+                  class="icon-shopping_cart"></span></a></li>
+                  <li class="nav-item cta cta-colored"><a href="../../back/user/controller/logout.php" class="nav-link"><span
+                class="oi oi-account-logout"></span></a></li>
+                  ';
+            }
+          ?>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 <section class="ftco-section">
   <div class="row">
