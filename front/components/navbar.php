@@ -15,23 +15,43 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a href="./index.php" class="nav-link">Inicio</a></li>
         <li class="nav-item active"><a href="./shop.php" class="nav-link">Loja</a></li>
-        <?php
-          if (!$usuario_esta_logado) {
-            echo '<li class="nav-item active"><a href="./signin.php" class="nav-link">Login</a></li>
-              <li class="nav-item active"><a href="./signup.php" class="nav-link">Cadastro</a></li>';
-          }
-        ?>
+        <?php if (!$usuario_esta_logado) { ?>
+          <li class="nav-item active"><a href="./signin.php" class="nav-link">Login</a></li>
+          <li class="nav-item active"><a href="./signup.php" class="nav-link">Cadastro</a></li>
+        <?php } ?>
         
         <!-- Verificar se o doido ta logado -->
-        <?php
-          if ($usuario_esta_logado) {
-            echo '<li class="nav-item cta cta-colored"><a href="./cart.php" class="nav-link"><span
-              class="icon-shopping_cart"></span></a></li>
-              <li class="nav-item cta cta-colored"><a href="../back/user/controller/logout.php" class="nav-link"><span
-            class="oi oi-account-logout"></span></a></li>
-              ';
-          }
-        ?>
+        <?php 
+        if ($usuario_esta_logado) {
+          if($_SESSION['email'] != 'admin@email.com') { ?>
+            <li class="nav-item cta cta-colored">
+              <a href="./cart.php" class="nav-link">
+                <span class="icon-shopping_cart"></span>
+              </a>
+            </li>
+            <li class="nav-item cta cta-colored">
+              <a href="../back/user/controller/logout.php" class="nav-link">
+                <span class="oi oi-account-logout"></span>
+              </a>
+            </li>
+          <?php 
+          } elseif ($_SESSION['email'] == 'admin@email.com') { ?>
+            <li class="nav-item active"><a href="./products.php" class="nav-link">Produtos</a></li>
+            <li class="nav-item active"><a href="./admin/users.php" class="nav-link">Usuários</a></li>
+            <li class="nav-item cta cta-colored">
+              <a href="./cart.php" class="nav-link">
+                <span class="icon-shopping_cart"></span>
+              </a>
+            </li>
+            <li class="nav-item cta cta-colored">
+              <a href="../back/user/controller/logout.php" class="nav-link">
+                <span class="oi oi-account-logout"></span>
+              </a>
+            </li>
+          
+      <?php 
+        }} ?>  
+       
       </ul>
     </div>
   </div>
