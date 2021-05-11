@@ -1,5 +1,8 @@
 <?php
+  session_start();
+
   include (dirname(__DIR__).'../../database/connection.php');
+
 
   $name = $_POST['name'];
 
@@ -26,10 +29,11 @@
       </script>
     ");
   } else {
-    $insert = "INSERT INTO product (name, principal_photo, price, quantity, description) VALUES(
-      '$name', '$principal_photo',$price, $quantity, '$description'
-    )";
-    $select = mysqli_query($connect, $insert);
+    $query = "INSERT INTO product (name, principal_photo, price, quantity, description) 
+    VALUES ('$name', '$principal_photo', '$price', '$quantity', '$description')";
+    
+    $create = mysqli_query($connect, $query); 
+
 
     header("Location: ../../../front/admin/add-product.php");
     exit;
