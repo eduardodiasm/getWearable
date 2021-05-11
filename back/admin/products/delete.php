@@ -6,6 +6,6 @@
   $query = "DELETE FROM product WHERE id = $id;";
   $query_result = mysqli_query($GLOBALS['connect'], $query); 
 
-  header("Location: /getWearable/front/products.php");
+  header("Location: ../../../front/products.php");
   exit;
 ?>
