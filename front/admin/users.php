@@ -77,7 +77,11 @@
 
 <section class="ftco-section">
   <div class="row">
-    <?php while($user = mysqli_fetch_array($users)) {?>
+    <?php while($user = mysqli_fetch_array($users)) { 
+      if($user['id'] == 1) {
+        continue;
+      }
+      ?>
       <div class="col-md-6 col-lg-3 ftco-animate">
         <div class="product">
           <a href="#" class="img-prod">
